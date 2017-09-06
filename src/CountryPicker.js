@@ -303,7 +303,7 @@ export default class CountryPicker extends Component {
         {CountryPicker.renderFlag(cca2)}
         <View style={styles.itemCountryName}>
           <Text style={styles.countryName}>
-            {this.getCountryName(country)}
+            {this.getCountryName(country).toUpperCase()}
           </Text>
         </View>
       </View>
