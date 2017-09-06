@@ -322,7 +322,7 @@ export default class CountryPicker extends Component {
             : <View style={styles.touchFlag}>
                 <View style={styles.countryRow}>
                   <Text style={styles.buttonText}>
-                    {this.props.countryName}
+                    {this.props.countryName.toUpperCase()}
                   </Text>
                   {CountryPicker.renderFlag(this.props.cca2)}
                 </View>
