@@ -93,13 +93,13 @@ export default StyleSheet.create({
     alignItems: "center"
   },
   letter: {
-    height: getHeightPercent(3.3),
+    height: getHeightPercent(5.5),
     width: getWidthPercent(4),
     justifyContent: "center",
     alignItems: "center"
   },
   letterText: {
     textAlign: "center",
-    fontSize: getHeightPercent(2.2)
+    fontSize: getHeightPercent(3.1)
   }
 });
