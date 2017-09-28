@@ -17,6 +17,7 @@ import {
   TextInput,
   ListView,
   ScrollView,
+  Button,
   Platform
 } from "react-native";
 import Fuse from "fuse.js";
@@ -282,17 +283,13 @@ export default class CountryPicker extends Component {
 
   renderLetters(letter, index) {
     return (
-      <TouchableOpacity
-        key={index}
-        onPress={() => this.scrollTo(letter)}
-        activeOpacity={0.6}
-      >
-        <View style={styles.letter}>
-          <Text style={styles.letterText}>
-            {letter}
-          </Text>
-        </View>
-      </TouchableOpacity>
+      <View key={index} style={styles.letter}>
+        <Button
+          style={styles.letterText}
+          onPress={() => this.scrollTo(letter)}
+          title={letter}
+        />
+      </View>
     );
   }
 
