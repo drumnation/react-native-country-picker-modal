@@ -362,12 +362,7 @@ export default class CountryPicker extends Component {
                 <ScrollView
                   contentContainerStyle={styles.letters}
                   keyboardShouldPersistTaps="always"
-                >
-                  {this.state.filter === "" &&
-                    this.state.letters.map((letter, index) =>
-                      this.renderLetters(letter, index)
-                    )}
-                </ScrollView>
+                />
               </View>
             </KeyboardAvoidingView>
           </View>
