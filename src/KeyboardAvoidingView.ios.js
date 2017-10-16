@@ -1,11 +1,23 @@
+// eslint-disable-next-line
 import React from 'react';
 import PropTypes from "prop-types";
 
+
+// eslint-disable-next-line
 import {
   StyleSheet,
   KeyboardAvoidingView as NativeKeyboardAvoidingView,
   View,
 } from 'react-native';
+
+let PropTypes = null;
+
+// eslint-disable-next-line
+PropTypes = require('prop-types');
+
+if (!PropTypes) {
+  PropTypes = React.PropTypes;
+}
 
 const styles = StyleSheet.create({
   container: {
