@@ -4,7 +4,7 @@ import { getWidthPercent, getHeightPercent } from "./ratio";
 import {
   responsiveFontSize,
   responsiveHeight,
-} from "react-native-cross-plaform-responsive-dimensions";
+} from "react-native-responsive-dimensions";
 
 export default StyleSheet.create({
   modalContainer: {
