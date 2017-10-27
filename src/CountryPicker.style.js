@@ -37,11 +37,12 @@ export default StyleSheet.create({
     flexDirection: "row"
   },
   buttonText: {
-    fontFamily: Platform.OS === "ios" ? "Myriad Pro" : "myriadpro_regular",
-    color: "white",
-    textAlign: "center",
+    alignSelf: 'center',
+    textAlign: 'center',
+    fontFamily: Platform.OS === 'ios' ? 'Myriad Pro' : 'myriadpro_regular',
+    color: 'white',
+    textAlign: 'center',
     fontSize: responsiveFontSize(2),
-    marginTop: responsiveHeight(2.9)
   },
   imgStyle: {
     resizeMode: "contain",
