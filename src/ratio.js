@@ -1,7 +1,7 @@
 // @flow
 import { Dimensions, Platform } from 'react-native'
 
-const { height } = Dimensions.get('window')
+const { height, width } = Dimensions.get('window')
 
 // Remove the status bar height
 // since the modal view does not cover this area
@@ -12,6 +12,8 @@ const DEFAULT_HEIGHT =
 
 export const getHeightPercent = percentage =>
   DEFAULT_HEIGHT * (percentage / 100)
+
+export const getWidthPercent = (w => width * (w / 100));
 
 export default {
   getHeightPercent
