@@ -1,80 +1,84 @@
-import { Platform, StyleSheet, PixelRatio } from 'react-native'
-import { getHeightPercent, getWidthPercent } from './ratio'
+// eslint-disable-next-line
+import { Platform, StyleSheet, PixelRatio } from "react-native";
+import { getWidthPercent, getHeightPercent } from "./ratio";
+import {
+  responsiveFontSize,
+  responsiveHeight,
+} from "react-native-responsive-dimensions";
 
 export default StyleSheet.create({
   modalContainer: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
     flex: 1
   },
   contentContainer: {
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    backgroundColor: 'white'
+    flexDirection: "row",
+    justifyContent: "space-between",
+    backgroundColor: "white"
   },
   header: {
-    marginTop: Platform.OS === 'ios' ? 16 : 0,
-    flexDirection: 'row',
-    alignItems: 'center'
+    marginTop: Platform.OS === "ios" ? 16 : 0,
+    flexDirection: "row",
+    alignItems: "center"
   },
   input: {
     height: 48,
-    width: '70%'
+    width: getWidthPercent(70)
   },
   inputOnly: {
-    marginLeft: '15%'
+    marginLeft: getWidthPercent(15)
   },
   touchFlag: {
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: "center",
+    justifyContent: "center"
   },
   countryRow: {
-    flexDirection: 'row',
+    flexDirection: "row"
   },
   buttonText: {
-    alignSelf: 'center',
-    justifyContent: 'center',
-    fontFamily: Platform.OS === 'ios' ? 'Myriad Pro' : 'myriadpro_regular',
-    color: 'white',
-    textAlign: 'center',
-    fontSize: getWidthPercent(4),
+    fontFamily: Platform.OS === "ios" ? "Myriad Pro" : "myriadpro_regular",
+    color: "white",
+    textAlign: "center",
+    fontSize: responsiveFontSize(2),
+    marginTop: responsiveHeight(2.9)
   },
   imgStyle: {
-    resizeMode: 'contain',
+    resizeMode: "contain",
     width: 25,
     height: 19,
     borderWidth: 1 / PixelRatio.get(),
-    borderColor: '#eee',
+    borderColor: "#eee",
     opacity: 0.8
   },
   emojiFlag: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     fontSize: 30,
     width: 30,
     height: 30,
     borderWidth: 1 / PixelRatio.get(),
-    borderColor: 'transparent',
-    backgroundColor: 'transparent'
+    borderColor: "transparent",
+    backgroundColor: "transparent"
   },
   itemCountry: {
-    flexDirection: 'row',
-    height: '7%',
-    justifyContent: 'flex-start',
-    alignItems: 'center'
+    flexDirection: "row",
+    height: getHeightPercent(7),
+    justifyContent: "flex-start",
+    alignItems: "center"
   },
   itemCountryFlag: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '7%',
-    width: '15%'
+    justifyContent: "center",
+    alignItems: "center",
+    height: getHeightPercent(7),
+    width: getWidthPercent(15)
   },
   itemCountryName: {
-    justifyContent: 'center',
-    width: '70%',
+    justifyContent: "center",
+    width: getWidthPercent(70),
     borderBottomWidth: 2 / PixelRatio.get(),
-    borderBottomColor: '#ccc',
-    height: '7%'
+    borderBottomColor: "#ccc",
+    height: getHeightPercent(7)
   },
   countryName: {
     fontSize: getHeightPercent(2.2)
@@ -84,18 +88,18 @@ export default StyleSheet.create({
   },
   letters: {
     marginRight: 10,
-    backgroundColor: 'transparent',
-    justifyContent: 'center',
-    alignItems: 'center'
+    backgroundColor: "transparent",
+    justifyContent: "center",
+    alignItems: "center"
   },
   letter: {
     height: getHeightPercent(5.5),
     width: getWidthPercent(4),
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
   letterText: {
-    textAlign: 'center',
-    fontSize: getHeightPercent(3.1),
-  },
+    textAlign: "center",
+    fontSize: getHeightPercent(3.1)
+  }
 });
