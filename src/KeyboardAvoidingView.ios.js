@@ -1,5 +1,5 @@
 // @flow
-
+import React from 'react';
 // eslint-disable-next-line
 import {
   StyleSheet,
