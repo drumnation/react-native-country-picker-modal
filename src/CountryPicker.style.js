@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import { Platform, StyleSheet, PixelRatio } from 'react-native';
-import { getWidthPercent, getHeightPercent } from './ratio';
 import { responsiveFontSize, responsiveHeight } from 'react-native-responsive-dimensions';
+import { getWidthPercent, getHeightPercent } from './ratio';
 
 export default StyleSheet.create({
   modalContainer: {
