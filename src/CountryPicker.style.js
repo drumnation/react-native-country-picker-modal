@@ -32,14 +32,16 @@ export default StyleSheet.create({
   },
   countryRow: {
     flexDirection: 'row',
+    padding: responsiveHeight(1),
+    justifyContent: 'flex-start',
+    alignItems: 'center',
   },
   buttonText: {
-    alignSelf: 'center',
-    textAlign: 'center',
     fontFamily: Platform.OS === 'ios' ? 'Myriad Pro' : 'myriadpro_regular',
     color: 'white',
-    textAlign: 'center',
-    fontSize: responsiveFontSize(2),
+    marginTop: Platform.OS === 'ios' ? responsiveHeight(1.1) : null,
+    fontSize: responsiveFontSize(1.8),
+    backgroundColor: 'transparent',
   },
   imgStyle: {
     resizeMode: 'contain',
