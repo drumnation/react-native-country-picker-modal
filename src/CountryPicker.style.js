@@ -1,10 +1,6 @@
 // eslint-disable-next-line
 import { Platform, StyleSheet, PixelRatio } from 'react-native';
-import {
-  responsiveFontSize,
-  responsiveHeight,
-  responsiveWidth,
-} from 'react-native-responsive-dimensions';
+import { responsiveFontSize, responsiveHeight } from 'react-native-responsive-dimensions';
 import { getWidthPercent, getHeightPercent } from './ratio';
 
 export default StyleSheet.create({
@@ -45,8 +41,6 @@ export default StyleSheet.create({
     color: 'white',
     marginTop: Platform.OS === 'ios' ? responsiveHeight(1.1) : null,
     fontSize: responsiveFontSize(2.5),
-    width: responsiveWidth(50),
-    textAlign: 'center',
     backgroundColor: 'transparent',
   },
   imgStyle: {
