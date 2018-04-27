@@ -109,6 +109,7 @@ export default class CountryPicker extends Component {
       if (index !== -1) {
         countryList.splice(index, 1);
       }
+      console.log("Language", props.language);
     });
 
     // Sort country list
@@ -280,11 +281,12 @@ export default class CountryPicker extends Component {
 
   renderCountryDetail(cca2) {
     const country = countries[cca2];
+    const countryName = this.getCountryName(country);
     return (
       <View style={styles.itemCountry}>
         {CountryPicker.renderFlag(cca2)}
         <View style={styles.itemCountryName}>
-          <Text style={styles.countryName}>{this.getCountryName(country)}</Text>
+          <Text style={styles.countryName}>{this.props.language ? this.props.languageNames[countryName] : countryName}</Text>
         </View>
       </View>
     );
